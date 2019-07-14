@@ -2086,7 +2086,7 @@ resource_load(XrmDatabase db, char *name, enum resource_type rtype, void *dst)
 	return 0;
 }
 
-void
+/*void
 config_init(void)
 {
 	char *resm;
@@ -2101,7 +2101,7 @@ config_init(void)
 	db = XrmGetStringDatabase(resm);
 	for (p = resources; p < resources + LEN(resources); p++)
 		resource_load(db, p->name, p->type, p->dst);
-}
+}*/
 
 void
 usage(void)
@@ -2183,7 +2183,7 @@ run:
 	if(!(xw.dpy = XOpenDisplay(NULL)))
 		die("Can't open display\n");
 
-	config_init();
+/*	config_init(); */
 	cols = MAX(cols, 1);
 	rows = MAX(rows, 1);
 	tnew(cols, rows);
